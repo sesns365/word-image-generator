@@ -1,6 +1,6 @@
 # 語詞圖片生成 skill（word-image-generator）
 
-給教師、講師、教材設計者與家長使用的 Claude skill。輸入語詞，就會為每個語詞各產生一張 1:1、純白背景、適合教材與圖卡的圖片。
+給教師、講師、教材設計者與家長使用的 AI skill（Claude、ChatGPT、Gemini 都能用）。輸入語詞，就會為每個語詞各產生一張 1:1、純白背景、適合教材與圖卡的圖片。
 
 由特工365 製作。
 
@@ -9,8 +9,8 @@
 | 平台 | 支援 | 說明 |
 |---|---|---|
 | Claude | ✓ 可以用 | Claude 沒有內建生圖，會給每個語詞的中英文提示詞；環境接有生圖工具時直接出圖 |
-| ChatGPT | ✗ 目前不支援 | 尚未提供 GPT 安裝版 |
-| Gemini | ✗ 目前不支援 | 尚未提供 Gemini 安裝版 |
+| ChatGPT | ✓ 可以用 | 用 ChatGPT 內建生圖直接出圖 |
+| Gemini | ✓ 可以用 | 用 Gemini 內建生圖直接出圖 |
 
 ## 功能
 
@@ -26,6 +26,10 @@
 3. 在 Claude 的「設定 → 功能（Capabilities）→ Skills」上傳這個 zip。
 
 Claude Code 使用者可直接把 `word-image-generator` 資料夾放到 `~/.claude/skills/`。
+
+**ChatGPT**：在對話中貼上「安裝這個 skill：https://github.com/sesns365/word-image-generator」，或把 `word-image-generator/SKILL.md` 的內容貼進對話（也可貼進自訂 GPT 的指令），再輸入語詞即可直接出圖。
+
+**Gemini**：在「自訂 → 技能」匯入 `word-image-generator` 資料夾（資料夾名稱要與 skill 名稱相同）；讀不到網址時，也可以把 `SKILL.md` 內容直接貼進對話。
 
 ## 使用範例
 
